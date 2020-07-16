@@ -1,0 +1,25 @@
+.user__img {
+    width: 100px;
+}
+
+.user__block{
+padding: 10px;
+
+}
+
+.user__desc {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+.selectedPage{
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+}
+.selected__no_active{
+    padding: 5px;
+}
+.pagination__block {
+    cursor: pointer;
+}

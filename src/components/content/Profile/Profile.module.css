@@ -1,0 +1,27 @@
+
+.content__foto {
+    width: 100%;
+}
+
+.ava {
+    width: 20%;
+}
+
+.user {
+    display: flex;
+}
+
+.user__desc {
+    font-size: 20px;
+    list-style-type: none;
+}
+.user__description {
+    display:flex ;
+}
+
+.job__icon{
+    width: 80px;
+    border-radius: 50%;
+}
+
+

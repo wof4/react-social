@@ -1,0 +1,16 @@
+.dialogs{
+    display: grid;
+    grid-template-columns: 3fr 10fr;
+}
+
+.names {
+    padding: 20px;
+    
+}
+.name {
+    padding: 5px 0;
+    
+}
+.name a{
+    text-decoration: none;
+}
