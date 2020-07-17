@@ -49,8 +49,15 @@ const containerForLogin = (props) => {
         <h3>Тестовые логин и пароль</h3>
       </div>
       <div>
-      <div>Email:<span>&ensp;free@samuraijs.com</span></div>
-      <div> Password:<span>&ensp;free</span></div>
+        <div>
+          Email:
+          <span>&ensp;free@samuraijs.com</span>
+        </div>
+        <div>
+          {' '}
+          Password:
+          <span>&ensp;free</span>
+        </div>
       </div>
     </div>
   );

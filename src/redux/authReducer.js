@@ -1,5 +1,4 @@
 import { loginApi, userApi } from '../api/api';
-import { Redirect } from 'react-router-dom';
 
 const SET_USER_DATA = 'SET_USER_DATA';
 const SET_CAPTCHA_URL = 'SET_CAPTCHA_URL';
@@ -54,8 +53,7 @@ export const getAuthUserData = () => (dispatch) => loginApi.getLoginStatus()
       } = response.data.data;
       dispatch(setUserData(id, email, login, true));
     }
-  })
-  .catch(error => <Redirect to= "/login" />);
+  });
 
 export const getCaptchaUrl = () => (dispatch) => {
   userApi.getCaptcha()
