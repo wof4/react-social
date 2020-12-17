@@ -11,24 +11,6 @@ import { appStateType } from '../../../redux/reduxStore';
 import { photosType, profileUserType } from '../../../type/type';
 
 
-type paramsType = {
-  params: {
-    userId: number
-  }
-}
-
-type propsType = {
-  id: number
-  match: paramsType
-  getUserProfile: (userId:number) => void
-  getUserStatus: (userId:number) => void
-  profile: profileUserType
-  status: string
-  changePhoto: (photo: any) => void
-  changeProfile: (formData: profileUserType, userId: number) => void
-  updateMyStatus: (localStatus: string) => void
-  photos: photosType
-}
 
 
 const setUserProfile = actions.setUserProfile
@@ -49,6 +31,7 @@ class ProfileContainer extends PureComponent<propsType> {
   }
 
   componentDidUpdate(prevProps: propsType) {
+    console.log(this.props)
     const {
       id,
       match: { params },
@@ -89,3 +72,23 @@ export default compose<React.ComponentType>(
   withRouter,
   withAuthRedirect,
 )(ProfileContainer);
+
+
+type paramsType = {
+  params: {
+    userId: number
+  }
+}
+
+type propsType = {
+  id: number
+  match: paramsType
+  getUserProfile: (userId:number) => void
+  getUserStatus: (userId:number) => void
+  profile: profileUserType
+  status: string
+  changePhoto: (photo: any) => void
+  changeProfile: (formData: profileUserType, userId: number) => void
+  updateMyStatus: (localStatus: string) => void
+  photos: photosType
+}

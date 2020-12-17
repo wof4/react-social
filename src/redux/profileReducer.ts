@@ -72,7 +72,14 @@ export const actions = {
 }
 
 
+
+
+
+
+
+
 export const getUserProfile = (userId: number):thunkType => (dispatch) => {
+
   return userApi.getUser(userId)
     .then((data) => {
       dispatch(actions.setUserProfile(data));

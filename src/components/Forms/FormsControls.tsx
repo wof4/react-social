@@ -1,5 +1,4 @@
 import React from 'react';
-import { InjectedFormProps } from 'redux-form';
 import s from './formsControls.module.css';
 
 

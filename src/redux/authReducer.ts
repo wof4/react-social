@@ -13,7 +13,7 @@ const initialState = {
   email: null as string | null,
   login: null as string | null,
   isAuth: false,
-  captcha: null as string| null 
+  captcha: null as string | null
 };
 
 type initialStateType = typeof initialState
@@ -26,7 +26,7 @@ const authReducer = (state = initialState, action: actionsType): initialStateTyp
     case 'SET_USER_DATA':
       return {
         ...state,
-        ...action.payload, 
+        ...action.payload,
       };
     case 'SET_CAPTCHA_URL':
       return {
@@ -44,14 +44,14 @@ const authReducer = (state = initialState, action: actionsType): initialStateTyp
 
 
 export const actions = {
-  setUserData: (id: number | null, email: string | null, login: string | null, isAuth: boolean) => ({ type: 'SET_USER_DATA', payload: { id, email, login, isAuth }}as const),
-  addCapthaFromState: (captcha: string) => ({ type: 'SET_CAPTCHA_URL', captcha }as const),
+  setUserData: (id: number | null, email: string | null, login: string | null, isAuth: boolean) => ({ type: 'SET_USER_DATA', payload: { id, email, login, isAuth } } as const),
+  addCapthaFromState: (captcha: string) => ({ type: 'SET_CAPTCHA_URL', captcha } as const),
 }
 
 
 
 
-export const getAuthUserData = ():thunkType => (dispatch) => loginApi.getLoginStatus()
+export const getAuthUserData = (): thunkType => (dispatch) => loginApi.getLoginStatus()
   .then((response: any) => {
     if (response.data.resultCode === 0) {
       const {
@@ -62,8 +62,8 @@ export const getAuthUserData = ():thunkType => (dispatch) => loginApi.getLoginSt
   });
 
 
-export const getCaptchaUrl = (): thunkType => (dispatch) => 
-loginApi.getCaptcha()
+export const getCaptchaUrl = (): thunkType => (dispatch) =>
+  loginApi.getCaptcha()
     .then((response: any) => {
       dispatch(actions.addCapthaFromState(response.data.url));
     });
@@ -71,18 +71,24 @@ loginApi.getCaptcha()
 
 
 
-export const login = (email: string, password: string, rememberMe: boolean, captcha: string): thunkType => (dispatch) => 
+export const login = (email: string, password: string, rememberMe: boolean, captcha: string): thunkType => (dispatch) =>
   loginApi.login(email, password, rememberMe, captcha)
     .then((response: any) => {
       if (response.data.resultCode === 0) {
         dispatch(getAuthUserData());
       } else if (response.data.resultCode === 10) {
         dispatch(getCaptchaUrl());
+      } else {
+        if (response.data.resultCode === 1
+          && response.config.data.email === 'free@SVGAnimatedEnumerationjs.com'
+          && password === "free") {
+     console.log('hf,jnftn')
+        }
       }
     });
 
 
-export const logout = (): thunkType => (dispatch) => 
+export const logout = (): thunkType => (dispatch) =>
   loginApi.logout()
     .then((response: any) => {
       if (response.data.resultCode === 0) {

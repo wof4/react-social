@@ -1,3 +1,4 @@
+import { localProfile } from "../local-state/locaalProfile";
 import {  photosType, profileUserType } from "../type/type";
 import { instance } from "./api";
 
@@ -15,7 +16,8 @@ export const userApi = {
 
     getUser(userId: number) {
         return instance.get<profileUserType>(`profile/${userId}`)
-            .then((response) => response.data);
+            .then((response) => response.data)
+            .catch(() => localProfile) 
     },
 
 
