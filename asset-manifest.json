@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/react-social/static/css/main.80cb23d0.chunk.css",
-    "main.js": "/react-social/static/js/main.b954b87d.chunk.js",
-    "main.js.map": "/react-social/static/js/main.b954b87d.chunk.js.map",
-    "runtime-main.js": "/react-social/static/js/runtime-main.672fe4e3.js",
-    "runtime-main.js.map": "/react-social/static/js/runtime-main.672fe4e3.js.map",
+    "main.js": "/react-social/static/js/main.67060d7f.chunk.js",
+    "main.js.map": "/react-social/static/js/main.67060d7f.chunk.js.map",
+    "runtime-main.js": "/react-social/static/js/runtime-main.d0be48b5.js",
+    "runtime-main.js.map": "/react-social/static/js/runtime-main.d0be48b5.js.map",
     "static/js/2.6673280d.chunk.js": "/react-social/static/js/2.6673280d.chunk.js",
     "static/js/2.6673280d.chunk.js.map": "/react-social/static/js/2.6673280d.chunk.js.map",
     "static/css/3.2fc2efb1.chunk.css": "/react-social/static/css/3.2fc2efb1.chunk.css",
     "static/js/3.c0109b80.chunk.js": "/react-social/static/js/3.c0109b80.chunk.js",
     "static/js/3.c0109b80.chunk.js.map": "/react-social/static/js/3.c0109b80.chunk.js.map",
     "static/css/4.075931c1.chunk.css": "/react-social/static/css/4.075931c1.chunk.css",
-    "static/js/4.c9051ce4.chunk.js": "/react-social/static/js/4.c9051ce4.chunk.js",
-    "static/js/4.c9051ce4.chunk.js.map": "/react-social/static/js/4.c9051ce4.chunk.js.map",
+    "static/js/4.1a1569b4.chunk.js": "/react-social/static/js/4.1a1569b4.chunk.js",
+    "static/js/4.1a1569b4.chunk.js.map": "/react-social/static/js/4.1a1569b4.chunk.js.map",
     "index.html": "/react-social/index.html",
-    "precache-manifest.b64cfbf45bcc836583ddd3f7606a1028.js": "/react-social/precache-manifest.b64cfbf45bcc836583ddd3f7606a1028.js",
+    "precache-manifest.ef4f06a6eb640129ec77ac8d8409c1bf.js": "/react-social/precache-manifest.ef4f06a6eb640129ec77ac8d8409c1bf.js",
     "service-worker.js": "/react-social/service-worker.js",
     "static/css/3.2fc2efb1.chunk.css.map": "/react-social/static/css/3.2fc2efb1.chunk.css.map",
     "static/css/4.075931c1.chunk.css.map": "/react-social/static/css/4.075931c1.chunk.css.map",
@@ -24,9 +24,9 @@
     "static/media/preloader.svg": "/react-social/static/media/preloader.11d6d872.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.672fe4e3.js",
+    "static/js/runtime-main.d0be48b5.js",
     "static/js/2.6673280d.chunk.js",
     "static/css/main.80cb23d0.chunk.css",
-    "static/js/main.b954b87d.chunk.js"
+    "static/js/main.67060d7f.chunk.js"
   ]
 }
