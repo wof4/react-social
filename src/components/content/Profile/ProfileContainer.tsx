@@ -28,10 +28,10 @@ class ProfileContainer extends PureComponent<propsType> {
     }
     getUserProfileTC(userId);
     getUserStatusTC(userId);
+   
   }
 
   componentDidUpdate(prevProps: propsType) {
-    console.log(this.props)
     const {
       id,
       match: { params },

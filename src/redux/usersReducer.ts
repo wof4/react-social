@@ -83,7 +83,6 @@ followedInProgress : (followStstus: boolean, userId: number) => ({ type: 'FOLLOW
 
 
 
-
 export const getUsers = (currentPage: number, pageSize: number):thuncTypes => {
   return async (dispatch) => {
     dispatch(actions.toggleFetching(true));

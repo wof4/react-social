@@ -53,6 +53,7 @@ export const actions = {
 
 export const getAuthUserData = (): thunkType => (dispatch) => loginApi.getLoginStatus()
   .then((response: any) => {
+   
     if (response.data.resultCode === 0) {
       const {
         id, email, login,
@@ -74,7 +75,7 @@ export const getCaptchaUrl = (): thunkType => (dispatch) =>
 export const login = (email: string, password: string, rememberMe: boolean, captcha: string): thunkType => (dispatch) =>
   loginApi.login(email, password, rememberMe, captcha)
     .then((response: any) => {
-      if (response.data.resultCode === 0) {
+      if (response.data.resultCode === 0 || response.resultCode === 0) {
         dispatch(getAuthUserData());
       } else if (response.data.resultCode === 10) {
         dispatch(getCaptchaUrl());

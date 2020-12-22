@@ -32,7 +32,7 @@ export type photosType = {
 
 export type profileUserType = {
     userId: number
-    lookingForAJob: boolean
+    lookingForAJob: boolean 
     lookingForAJobDescription: string
     fullName: string
     contacts: contactsType

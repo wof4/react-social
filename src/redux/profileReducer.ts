@@ -28,7 +28,7 @@ const profileReducer = (state = initialState, action: actionsType): initialState
       };
       return {
         ...state,
-        posts: [...state.posts, newPost],
+        posts: [newPost, ...state.posts ],
       };
     }
 
@@ -79,7 +79,6 @@ export const actions = {
 
 
 export const getUserProfile = (userId: number):thunkType => (dispatch) => {
-
   return userApi.getUser(userId)
     .then((data) => {
       dispatch(actions.setUserProfile(data));
@@ -90,6 +89,7 @@ export const getUserStatus = (userId: number):thunkType => (dispatch) => {
   return userApi.getUserStatus(userId)
     .then((data) => {
       dispatch(actions.setUserStatus(data));
+      
     });
 }
 
@@ -112,6 +112,7 @@ return  profileApi.onChangePhoto(foto)
 
 export const changeProfile = (profile: profileUserType, userId: number):thunkType => (dispatch) =>{
  return profileApi.onChangeProfile(profile)
+ 
     .then((response: any) => {
       if (response.data.resultCode === 0) {
         dispatch(getUserProfile(userId));

@@ -8,8 +8,6 @@ import userDefaultIcon from '../../../img/users.jpg';
 import ProfileStatusWithHook from './ProfileStatusWithHook';
 import ProfileReduxForm from './profileFormData';
 import { contactsType, photosType, profileUserType } from '../../../type/type';
-import { actions } from '../../../redux/profileReducer';
-import { localProfile } from '../../../local-state/locaalProfile';
 
 
 
@@ -34,8 +32,7 @@ const Profile: React.FC<propsType> = (props) => {
       <Loader />
       
     );
-    // actions.setUserProfile(localProfile)
-   
+
   }
 
   const onChangeMyPhoto = (e: ChangeEvent<HTMLInputElement>) => {
